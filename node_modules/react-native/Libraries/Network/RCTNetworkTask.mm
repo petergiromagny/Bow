@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -99,12 +99,6 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
 {
   BOOL valid = YES;
   if (_requestToken == nil) {
-    if (requestToken == nil) {
-      if (RCT_DEBUG) {
-        RCTLogError(@"Missing request token for request: %@", _request);
-      }
-      valid = NO;
-    }
     _requestToken = requestToken;
   } else if (![requestToken isEqual:_requestToken]) {
     if (RCT_DEBUG) {

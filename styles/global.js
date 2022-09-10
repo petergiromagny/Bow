@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const colorWhite = '#FAFAFA', 
+const colorWhite = '#FAFAFA',
       colorGrey = '#373737',
       colorRed = '#F22613',
       colorCircleTwo = '#F26716',
@@ -66,11 +66,11 @@ export const globalStyles = StyleSheet.create({
     },
     borderBottom: {
       alignContent: 'center',
-      justifyContent: 'center' , 
+      justifyContent: 'center' ,
       borderBottomColor: 'white',
       borderBottomWidth: 2,
       width: '50%',
-      marginVertical: 10 
+      marginVertical: 10
     },
     btnText: {
       marginLeft: 10,
@@ -84,9 +84,9 @@ export const globalStyles = StyleSheet.create({
       bottom: 10,
       marginRight: 15
     }
-}); 
+});
 
-export const randomeStyles = StyleSheet.create({
+export const randomStyles = StyleSheet.create({
   body: {
     backgroundColor: colorWhite,
     resizeMode: "cover",

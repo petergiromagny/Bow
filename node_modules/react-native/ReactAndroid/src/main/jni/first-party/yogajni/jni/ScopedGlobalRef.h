@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -36,7 +36,7 @@ namespace vanillajni {
  * This class is very explicit in its behavior, and it does not allow to perform
  * unexpected conversions or unexpected ownership transfer. In practice, this
  * class acts as a unique pointer where the underying JNI reference can have one
- * and just one owner. Transfering ownership is allowed but it is an explicit
+ * and just one owner. Transferring ownership is allowed but it is an explicit
  * operation (implemneted via move semantics and also via explicity API calls).
  *
  * Note that this class doesn't receive an explicit JNIEnv at construction time.
@@ -84,9 +84,7 @@ public:
     return *this;
   }
 
-  ~ScopedGlobalRef() {
-    reset();
-  }
+  ~ScopedGlobalRef() { reset(); }
 
   /**
    * Deletes the currently held reference and reassigns a new one to the
@@ -120,9 +118,7 @@ public:
   /**
    * Returns true if the underlying JNI reference is not NULL.
    */
-  operator bool() const {
-    return mGlobalRef != NULL;
-  }
+  operator bool() const { return mGlobalRef != NULL; }
 
   ScopedGlobalRef(const ScopedGlobalRef& ref) = delete;
   ScopedGlobalRef& operator=(const ScopedGlobalRef& other) = delete;
